@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+		<link rel="stylesheet" type="text/css" href="">
+		<meta charset="UTF-8">
+        <title>task1</title>
+	</head>	
+    <body>
+		<div id = "box">
+			Результат в консоли
+		</div>
+		<script>
+			var objArray = [
+				{ name: 'Jonny Walker', birthDate: '1995-12-17' },
+				{ name: 'Andrew', birthDate: '2011-10-29' },
+				{ name: 'Stepan', birthDate: '2001-10-29' },
+				{ name: 'Ivan', birthDate: '1991-10-29' }
+			];
+			
+			function searchByName(str){
+				var output = [];
+				for (var i = 0; i < objArray.length; i++) {
+					if (objArray[i].name == str) {
+						output.push( objArray[i] );
+					}
+				}	
+				return output;
+			}
+			
+			var result = searchByName("Andrew");
+			console.log(result);
+		</script>
+	</body>
+</html>
